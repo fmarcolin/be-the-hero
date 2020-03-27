@@ -18,7 +18,7 @@ export default function Profile() {
     useEffect(() => {
         api.get('profile', {
             headers: {
-                Authoriztion: ongId
+                Authorization: ongId
             }
         }).then(response => {
             setIncidents(response.data);
@@ -29,7 +29,7 @@ export default function Profile() {
         try {
             await api.delete(`incidents/${id}`, {
                headers: {
-                   Authoriztion: ongId
+                   Authorization: ongId
                } 
             });
 
